@@ -1,5 +1,4 @@
-﻿using ClienteChallenge.Dto;
-using ClienteChallenge.Interfaces;
+﻿using ClienteChallenge.Interfaces;
 using ClienteChallenge.Models;
 using Microsoft.EntityFrameworkCore;
 
