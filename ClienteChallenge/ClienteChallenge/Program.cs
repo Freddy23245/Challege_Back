@@ -1,9 +1,13 @@
 using ClienteChallenge.Datos;
 using ClienteChallenge.Interfaces;
 using ClienteChallenge.Models;
+using log4net.Config;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+var log4netConfig = new FileInfo("log4net.config");
+XmlConfigurator.Configure(log4net.LogManager.GetRepository(Assembly.GetEntryAssembly()), log4netConfig);
 
 // Add services to the container.
 builder.Services.AddDbContext<ClienteChallengeContext>(options =>
